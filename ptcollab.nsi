@@ -62,7 +62,7 @@ Section "Install"
     CopyFiles "$PLUGINSDIR\icon.ico" "$INSTDIR\icon.ico"
 
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ptcollab" "DisplayName" "ptcollab"
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ptcollab" "DisplayIcon" "$\"$INSTDIR$\icon.ico$\""
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ptcollab" "DisplayIcon" "$\"$INSTDIR\icon.ico$\""
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ptcollab" "InstallLocation" "$\"$INSTDIR$\""
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ptcollab" "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ptcollab" "URLInfoAbout" "https://yuxshao.github.io/ptcollab/"
