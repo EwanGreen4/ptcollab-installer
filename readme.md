@@ -8,6 +8,6 @@ Compile time requirements
 Runtime requirements
 - Upstream zip has a subfolder called "ptcollab".
 
-The compilation of ptcollab.nsi creates a file "ptcollab-install-(version).exe" when compiled.
+The compilation of ptcollab.nsi creates a file "ptcollab-install-(version).exe".
 
 Ewan Green 2021
