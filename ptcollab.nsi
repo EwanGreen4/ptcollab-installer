@@ -3,9 +3,6 @@
 
 !include "MUI2.nsh"
 !include 'FileFunc.nsh'
-
-!insertmacro Locate
-
 !include ".\MoveFileFolder.nsh"
 !include ".\config.txt"
 
@@ -13,38 +10,19 @@ Name "ptcollab ${version}"
 OutFile "ptcollab-install-${version}.exe"
 Unicode True
 InstallDir "$PROGRAMFILES\ptcollab"
-RequestExecutionLevel user
+RequestExecutionLevel admin
 
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_BITMAP ".\header.bmp" ; optional
 !define MUI_HEADERIMAGE_BITMAP_STRETCH AspectFitHeight
-
 !define MUI_ICON ".\icon.ico"
 !define MUI_UNICON ".\icon.ico"
 
-;!macro VerifyUserIsAdmin
-;UserInfo::GetAccountType
-;pop $0
-;${If} $0 != "admin" ;Require admin rights on NT4+
-;        messageBox mb_iconstop "Administrator rights required!"
-;        setErrorLevel 740 ;ERROR_ELEVATION_REQUIRED
-;        quit
-;${EndIf}
-;!macroend
-; 
-;function .onInit
-;	setShellVarContext all
-;	!insertmacro VerifyUserIsAdmin
-;functionEnd
-
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
-
 !insertmacro MUI_UNPAGE_CONFIRM
 !insertmacro MUI_UNPAGE_INSTFILES
-
 !insertmacro MUI_LANGUAGE "English"
-RequestExecutionLevel admin
 
 Section "Install"
 
